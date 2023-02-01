@@ -1,0 +1,12 @@
+#EDEPSIM
+export EDEPSIMDIR=/eos/user/l/ldinoto/edep-sim/edep-gcc-8.2.0-x86_64-pc-linux-gnu/
+export PATH=/eos/user/l/ldinoto/edep-sim/edep-gcc-8.2.0-x86_64-pc-linux-gnu/bin:${PATH}
+export LD_LIBRARY_PATH=/eos/user/l/ldinoto/edep-sim/edep-gcc-8.2.0-x86_64-pc-linux-gnu/lib:${LD_LIBRARY_PATH}
+
+source /cvmfs/dune.opensciencegrid.org/products/dune/setup_dune.sh 
+TMPROOT=$(ups setup root v6_18_04d -q e19:prof)
+source $TMPROOT
+TMPGEANT4=$(ups setup geant4 v4_10_3_p03e -q e19:prof)
+source $TMPGEANT4
+TMPCMAKE=$(ups setup cmake v3_14_3)
+source $TMPCMAKE
